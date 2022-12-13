@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #EFB83C;
+    --secondary: #2D2B2B;
+}
+
+.navbar-wrapper{
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.links {
+    /* display: flex; */
+    list-style: none;
+    margin: 20px 75px 20px auto;
+    display: none;
+}
+
+.logo,
+.link {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 20px;
+    /* 20px 75px if desktop */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.link {
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 55px;
+}
+
+.hamburger-menu {
+    /* display: none; */
+    margin: 20px 20px 20px auto;
+}
+
+.hamburger-bar {
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+.hamburger-bar::before,
+.hamburger-bar::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+}
+
+.hamburger-bar::before {
+    width: 16px;
+    top: -8px;
+    right: 0;
+}
+
+.hamburger-bar::after {
+    width: 21px;
+    bottom: -8px;
+    right: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary);
+}
+
+.hero-texts {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /* width: 100%; */
+}
+
+.hero-texts p {
+    /* background-color: black; */
+    text-align: left;
+    position: relative;
+}
+
+.hero-texts p:nth-child(1) {
+    /* font-size: 30px; */
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.hero-texts p:nth-child(2) {
+    /* font-size: 36px; */
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.hero-texts p:nth-child(3) {
+    /* font-size: 42px; */
+    font-size: 2rem;
+}
+
+.hero-texts p span {
+    color: var(--primary);
+}
+
+.phoneview-img {
+    /* height: 83%; */
+    height: 60vh;
+    /* max-height: 600px; */
+    /* margin-left: -20px; */
+}
