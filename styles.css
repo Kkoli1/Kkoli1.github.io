@@ -14,7 +14,9 @@
 }
 
 .navbar-wrapper{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 
 .navbar {
@@ -88,13 +90,19 @@
     right: 0;
 }
 
+.hero-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
 .hero {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 100%;
+    height: 100%;
     background-color: var(--secondary);
 }
 
@@ -115,6 +123,7 @@
     /* font-size: 30px; */
     font-size: 1rem;
     margin-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 .hero-texts p:nth-child(2) {
@@ -136,4 +145,37 @@
     /* height: 83%; */
     height: 60vh;
     /* max-height: 600px; */
+}
+
+.arrow-img-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-img {
+    height: 20px;
+
+    animation-name: updowninfinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+
+@keyframes updowninfinite {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
