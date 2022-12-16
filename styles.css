@@ -158,7 +158,7 @@
 
 .arrow-img {
     height: 20px;
-
+    cursor: pointer;
     animation-name: updowninfinite;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -177,5 +177,102 @@
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+@media only screen and (min-width: 370px) {
+    .logo {
+        font-size: 2.1rem;
+    }
+
+    .hamburger-bar {
+        width: 21px;
+        height: 3px;
+    }
+    
+    .hamburger-bar::before,
+    .hamburger-bar::after {
+        height: 3px;
+    }
+    
+    .hamburger-bar::before {
+        width: 19px;
+    }
+    
+    .hamburger-bar::after {
+        width: 24px;
+    }
+    
+
+    .hero-texts p:nth-child(1) {
+        /* font-size: 30px; */
+        font-size: 1.2rem;
+    }
+    
+    .hero-texts p:nth-child(2) {
+        /* font-size: 36px; */
+        font-size: 1.6rem;
+    }
+    
+    .hero-texts p:nth-child(3) {
+        /* font-size: 42px; */
+        font-size: 2.2rem;
+    }
+
+    .arrow-img-wrapper {
+        bottom: 20px;
+    }
+
+    .arrow-img {
+        height: 30px;
+
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .logo {
+        font-size: 2.35rem;
+    }
+
+    .hamburger-bar {
+        width: 23px;
+        height: 3px;
+    }
+    
+    .hamburger-bar::before,
+    .hamburger-bar::after {
+        height: 3px;
+    }
+    
+    .hamburger-bar::before {
+        width: 21px;
+    }
+    
+    .hamburger-bar::after {
+        width: 27px;
+    }
+
+    .hero-texts p:nth-child(1) {
+        /* font-size: 30px; */
+        font-size: 1.4rem;
+    }
+    
+    .hero-texts p:nth-child(2) {
+        /* font-size: 36px; */
+        font-size: 1.8rem;
+    }
+    
+    .hero-texts p:nth-child(3) {
+        /* font-size: 42px; */
+        font-size: 2.4rem;
+    }
+
+    .arrow-img-wrapper {
+        bottom: 23px;
+    }
+
+    .arrow-img {
+        height: 33px;
+
     }
 }
