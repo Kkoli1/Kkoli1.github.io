@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="jquery-3.6.1.min.js"></script>
     <title>Meshr</title>
 </head>
 
@@ -26,28 +27,37 @@
             </div>
         </div>
     </div>
-    <div class="hero-wrapper">
-        <div class="hero">
-            <div class="hero-texts">
-                <p>IDEATE FASTE<span>R</span></p>
-                <p>DESIGN BETTE<span>R</span></p>
-                <p>DO IT WITH MESH<span>R</span></p>
+
+    <section id="hero-section">
+        <div class="hero-wrapper">
+            <div class="hero">
+                <div class="hero-texts">
+                    <p>IDEATE FASTE<span>R</span></p>
+                    <p>DESIGN BETTE<span>R</span></p>
+                    <p>DO IT WITH MESH<span>R</span></p>
+                </div>
+                <img src="assets/images/phoneview.png" alt="Meshr Phone View" class="phoneview-img">
             </div>
-            <img src="assets/images/phoneview.png" alt="Meshr Phone View" class="phoneview-img">
+            <!-- <div class="arrow-img-wrapper">
+                <a href="#about-section"><img src="assets/images/arrowdown.png" alt="Arrow Down" class="arrow-img"></a>
+            </div> -->
         </div>
-        <div class="arrow-img-wrapper">
-            <img src="assets/images/arrowdown.png" alt="Arrow Down" class="arrow-img">
+    </section>
+    <section id="about-section">
+        <div class="about-wrapper">
+            <h1 class="about-text-1">about</h1>
+            <img class="bg-logo" src="assets/images/logo.png" alt="bg-logo" srcset="">
+            <div class="slider-container">
+                <div class="slider">
+                    <img class="container-border top-left" src="assets/images/topleft.png" alt="top left border" srcset="">
+                    <img class="container-border top-right" src="assets/images/topright.png" alt="top left border" srcset="">
+                    <img class="container-border bot-left" src="assets/images/botleft.png" alt="top left border" srcset="">
+                    <img class="container-border bot-right" src="assets/images/botright.png" alt="top left border" srcset="">
+                </div>         
+            </div>
+            <h1 class="about-text-2">about</h1>
         </div>
-    </div>
-    <div class="about-wrapper">
-        <h1 class="about-text-1">about</h1>
-        <div class="slider-container">
-            <div class="slider">
-                <img class="container-border top-left" src="assets/images/topleft.png" alt="top left border" srcset="">
-            </div>         
-        </div>
-        <h1 class="about-text-2">about</h1>
-    </div>
+    </section>
 </body>
 
 </html>
