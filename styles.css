@@ -260,9 +260,9 @@ html {
     margin: auto;
 }
 
-.about-wrapper .slider-container {
+.about-wrapper .carousel-container {
     width: 80%;
-    height: 500px;
+    height: 55%;
     position: absolute;
     top: 0;
     right: 0;
@@ -271,37 +271,67 @@ html {
     margin: auto;
 }
 
-.about-wrapper .slider-container .slider {
+.about-wrapper .carousel-container .carousel {
     height: 100%;
     width: 100%;
     position: relative;
+    /* overflow: hidden; */
 } 
 
-.about-wrapper .slider-container .slider .container-border {
+.about-wrapper .carousel-container .carousel .container-border {
     position: absolute;
     transform: scale(1.5);
 }
 
-.about-wrapper .slider-container .slider .top-left {
+.about-wrapper .carousel-container .carousel .top-left {
     top: 0;
     left: 0;
 }
 
-.about-wrapper .slider-container .slider .top-right {
+.about-wrapper .carousel-container .carousel .top-right {
     top: 0;
     right: 0;
 }
 
-.about-wrapper .slider-container .slider .bot-left {
+.about-wrapper .carousel-container .carousel .bot-left {
     bottom: 0;
     left: 0;
 }
 
-.about-wrapper .slider-container .slider .bot-right {
+.about-wrapper .carousel-container .carousel .bot-right {
     bottom: 0;
     right: 0;
 }
 
+.about-wrapper .carousel-container .carousel .slider {
+    background-color: #2D2B2B;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.about-wrapper .carousel-container .carousel .slider .about-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.about-wrapper .carousel-container .carousel .slider .page-1 {
+    background-color: grey;
+}
+
+.about-wrapper .carousel-container .carousel .slider .page-2 {
+    background-color: white;
+}
+.about-wrapper .carousel-container .carousel .slider .page-3 {
+    background-color: red;
+}
 
 @media only screen and (min-width: 370px) {
     .logo {
@@ -508,7 +538,7 @@ html {
     }
 
     .about-wrapper h1 {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     .about-wrapper .about-text-1 {
@@ -599,6 +629,7 @@ html {
         font-size: 3.8rem;
     }
 
+    
 }
 
 @media only screen and (min-width: 1500px) {
@@ -629,5 +660,8 @@ html {
         height: 80%;
     }
 
+    .about-wrapper h1 {
+        font-size: 10rem;
+    }
 
 }

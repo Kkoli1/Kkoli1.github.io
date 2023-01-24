@@ -7,5 +7,8 @@ hamburger.addEventListener('click', () => {
 })
 
 
+var w = screen.width;
+console.log(w);
 
-
+const slider = document.querySelector(".slider");
+console.log(slider.clientHeight);
