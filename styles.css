@@ -22,7 +22,7 @@ html {
 .navbar-wrapper{
     position: absolute;
     top: 0;
-    z-index: 90;
+    z-index: 999;
     width: 100%;
 }
 
@@ -132,11 +132,12 @@ html {
     bottom: -8px;
     right: 0;
 }
-
+ 
 .hero-wrapper {
     height: 100vh;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .hero {
@@ -153,6 +154,7 @@ html {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    z-index: 99;
     /* width: 100%; */
 }
 
@@ -188,7 +190,43 @@ html {
     /* height: 83%; */
     height: 60vh;
     /* max-height: 600px; */
+    z-index: 99;
 }
+
+.bg-bird-wrapper {
+    position: absolute;
+    top: 10px;
+    z-index: 98;
+}
+
+.bg-bird-wrapper img {
+    height: 95vh;
+    opacity: 0.1;
+
+    animation-name: leftrightinfinite;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+
+.bg-elephant-wrapper {
+    position: absolute;
+    top: 10px;
+    z-index: 98;
+}
+
+.bg-elephant-wrapper img {
+    height: 150vh;
+    opacity: 0.05;
+
+    animation-name: leftrightinfinite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+
 
 .arrow-img-wrapper {
     width: 100%;
@@ -197,6 +235,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99;
 }
 
 .arrow-img {
@@ -207,6 +246,20 @@ html {
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     transition: all .3s;
+}
+
+@keyframes leftrightinfinite {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 @keyframes updowninfinite {
@@ -312,18 +365,20 @@ html {
     z-index: 99;
 }
 
-.about-wrapper .carousel-container .carousel .up-arrow {
+.about-wrapper .carousel-container .carousel .prev-arrow {
     left: 0;
     right: 0;
     top: 20px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.about-wrapper .carousel-container .carousel .down-arrow {
+.about-wrapper .carousel-container .carousel .next-arrow {
     left: 0;
     right: 0;
     bottom: 20px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     rotate: 180deg;
 }
 
@@ -452,11 +507,87 @@ html {
 
     .arrow-img {
         height: 33px;
-
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 500px) and (max-width: 699px) and (max-height: 400px){
+    .hero {
+        flex-direction: row;
+    }
+
+    .hero .hero-texts {
+        margin-left: 10%;
+        margin-right: auto;
+    }
+
+    .hero img {
+        margin-right: 10%;
+        margin-left: auto;
+    }
+
+    .hero-texts p:nth-child(1) {
+        /* font-size: 30px; */
+        font-size: 1rem;
+    }
+    
+    .hero-texts p:nth-child(2) {
+        /* font-size: 36px; */
+        font-size: 1.4rem;
+    }
+    
+    .hero-texts p:nth-child(3) {
+        /* font-size: 42px; */
+        font-size: 2rem;
+    }
+
+    .arrow-img {
+        height: 25px;
+    }
+
+    .about-wrapper .carousel-container .carousel .slider .about-content {
+        font-size: 1rem;
+    }
+
+    .about-wrapper .carousel-container .carousel .container-border {
+        transform: scale(0.7);
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-height: 400px) {
+    .hero {
+        flex-direction: row;
+    }
+    
+    .hero .hero-texts {
+        margin-left: auto;
+    }
+
+    .hero img {
+        margin-right: auto;
+    }
+
+    .hero-texts p:nth-child(1) {
+        /* font-size: 30px; */
+        font-size: 1.4rem;
+    }
+    
+    .hero-texts p:nth-child(2) {
+        /* font-size: 36px; */
+        font-size: 1.8rem;
+    }
+    
+    .hero-texts p:nth-child(3) {
+        /* font-size: 42px; */
+        font-size: 2.4rem;
+    }
+
+    .arrow-img {
+        height: 27px;
+    }
+
+}
+
+@media only screen and (min-width: 700px) and (min-height: 400px) {
     .logo {
         font-size: 2.35rem;
     }
@@ -575,6 +706,30 @@ html {
     .about-wrapper .about-text-2 {
         bottom: -60px;
         right: -30px;
+    }
+
+    .about-wrapper .carousel-container .carousel .slider {
+        flex-direction: row;
+        width: 300%;
+        height: 100%;
+    }
+
+    .about-wrapper .carousel-container .carousel .slider-arrow {
+        scale: 1.5;
+    }
+
+    .about-wrapper .carousel-container .carousel .prev-arrow {
+        rotate: -90deg;
+        top: unset;
+        right: unset;
+        left: 40%;
+        bottom: 20px;
+    }
+
+    .about-wrapper .carousel-container .carousel .next-arrow {
+        rotate: 90deg;
+        right: 40%;
+        left: unset;
     }
 }
 

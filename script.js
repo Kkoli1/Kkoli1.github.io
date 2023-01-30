@@ -6,25 +6,40 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 })
 
-const upArrow = document.querySelector('.up-arrow');
-const downArrow = document.querySelector('.down-arrow');
+const prevArrow = document.querySelector('.prev-arrow');
+const nextArrow = document.querySelector('.next-arrow');
 const slide = document.querySelector('.slider');
 const carousel = document.querySelector('.carousel');
 
 var direction = -1;
+var directionFlag = window.innerWidth >= 800 ? 1 : -1; 
 
-upArrow.addEventListener('click', () => {
+// Check for window size and change slider direction
+window.addEventListener("resize", () => {
+    directionFlag = window.innerWidth >= 800 ? 1 : -1;
+})
+
+
+prevArrow.addEventListener('click', () => {
     if (direction === -1) {
         slide.appendChild(slide.firstElementChild);
         direction = 1;
     }
     
     carousel.style.alignItems = 'flex-end';
-    slide.style.transform = 'translateY(33.316%)';
+    carousel.style.justifyContent = 'flex-end';
+
+    console.log(directionFlag);
+    if(directionFlag === -1){
+        slide.style.transform = 'translateY(33.316%)';
+    }else {
+        slide.style.transform = 'translateX(33.316%)'
+    }
+        
 
 })
 
-downArrow.addEventListener('click', () => {
+nextArrow.addEventListener('click', () => {
     if(direction === 1){
         direction = -1;
     
@@ -32,7 +47,13 @@ downArrow.addEventListener('click', () => {
     }
     
     carousel.style.alignItems = 'flex-start';
-    slide.style.transform = 'translateY(-33.316%)';
+    carousel.style.justifyContent = 'flex-start';
+
+    if(directionFlag === -1){
+        slide.style.transform = 'translateY(-33.316%)';
+    }else {
+        slide.style.transform = 'translateX(-33.316%)'
+    }
 })
 
 slide.addEventListener('transitionend', () => {
@@ -45,9 +66,16 @@ slide.addEventListener('transitionend', () => {
     }
     
     slide.style.transition = 'none';
-    slide.style.transform = 'translateY(0%)';
+    if(directionFlag === -1){
+        slide.style.transform = 'translateY(0%)';
+    }else {
+        slide.style.transform = 'translateX(0%)';
+    }
+    
     setTimeout(() => {
         slide.style.transition = 'all 0.5s ease-in-out 0s';
     })
     
 })
+
+
