@@ -204,7 +204,7 @@ html {
     opacity: 0.1;
 
     animation-name: leftrightinfinite;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     transition: all .3s;
