@@ -11,6 +11,7 @@
 :root {
     --primary: #EFB83C;
     --secondary: #2D2B2B;
+    --light: #555555;
 }
 
 html {
@@ -428,6 +429,31 @@ body.active {
 }
 .about-wrapper .carousel-container .carousel .slider .page-3 {
     /* background-color: red; */
+}
+
+.features-section {
+    width: 100vw;
+    background-color: var(--secondary);
+}
+
+.features-wrapper .features-text {
+    color: var(--primary);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 100;
+    padding: 15px 0px 35px 0px;
+    margin-left: 20px;
+}
+
+.features-wrapper .features-text span {
+    color: white
+}
+
+.features-wrapper .main-features .feature {
+    background-color: var(--light);
+    margin: 0px 30px 45px 30px;
+    border-radius: 40px;
+    padding: 20px;
 }
 
 @media only screen and (min-width: 370px) {
