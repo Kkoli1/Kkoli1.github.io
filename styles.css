@@ -445,8 +445,8 @@ body.active {
     font-family: 'Roboto', sans-serif;
     font-size: 2.8rem;
     font-weight: 100;
-    padding: 15px 0px 35px 0px;
-    margin-left: 20px;
+    padding: 35px 0px 35px 0px;
+    /* margin-left: 20px; */
     margin-bottom: 20px;
 }
 
@@ -454,13 +454,14 @@ body.active {
     color: white
 }
 
-.features-wrapper .main-features {
+.features-wrapper .main-features,
+.features-wrapper .sub-features {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.features-wrapper .main-features .feature {
+.features-wrapper .feature {
     background-color: var(--light);
 
     margin: 0px 30px 45px 30px;
@@ -477,7 +478,7 @@ body.active {
     -moz-box-shadow: -1px 14px 11px -5px var(--primary);
 }
 
-.features-wrapper .main-features .feature .feature-upper {
+.features-wrapper .feature .feature-upper {
     /* background-color: red; */
     margin-top: 20px;
     display: flex;
@@ -485,11 +486,11 @@ body.active {
     align-items: center;
 }
 
-.features-wrapper .main-features .feature .feature-upper .feature-icon {
+.features-wrapper .feature .feature-upper .feature-icon {
     margin-bottom: 25px;
 }
 
-.features-wrapper .main-features .feature .feature-lower {
+.features-wrapper .feature .feature-lower {
     /* background-color: orange; */
     height: 100%;
     display: grid;
@@ -497,22 +498,21 @@ body.active {
 }
 
 
-.features-wrapper .main-features .feature .feature-upper .feature-name,
-.features-wrapper .main-features .feature .feature-lower .feature-desc {
+.features-wrapper .feature .feature-upper .feature-name,
+.features-wrapper .feature .feature-lower .feature-desc {
     font-family: 'Roboto', sans-serif;
 }
 
-.features-wrapper .main-features .feature .feature-upper .feature-name {
+.features-wrapper .feature .feature-upper .feature-name {
     color: var(--primary);
     font-size: 2rem;
 }
 
-.features-wrapper .main-features .feature .feature-upper .feature-name span {
+.features-wrapper .feature .feature-upper .feature-name span {
     color: white;
 }
 
-.features-wrapper .main-features .feature .feature-lower .feature-desc {
-    /* background-color: red; */
+.features-wrapper .feature .feature-lower .feature-desc {
     font-weight: 100;
     color: white;
     font-size: 1.8rem;
@@ -520,6 +520,24 @@ body.active {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.features-wrapper .sub-features .im2im-text {
+    color: var(--primary);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 100;
+    padding: 35px 0px 35px 0px;
+}
+
+.features-wrapper .sub-features .im2im-text span {
+    color: white;
+}
+
+.features-wrapper .sub-features .feature .feature-lower .feature-desc {
+    font-size: 1.4rem;
+}
+
+
 
 @media only screen and (min-width: 370px) {
     .logo {
