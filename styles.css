@@ -874,6 +874,41 @@ body.active {
     .about-wrapper .carousel-container .carousel .slider .about-content {
         font-size: 2.5rem;
     }
+
+    .main-features .features-text {
+        align-self: flex-start;
+    }
+
+    .main-features .feature {
+        margin-bottom: 100px;
+        margin-left: unset;
+        margin-right: unset;
+        max-width: unset;
+        width: 90%;
+
+        flex-direction: unset;
+    }
+
+    .main-features>div.feature:nth-child(odd) {
+        align-self: flex-end;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        flex-direction: row-reverse;
+    }
+
+    .main-features>div.feature:nth-child(even) {
+        align-self: flex-start;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+
+    .main-features .features-text {
+        font-size: 4.3rem;
+    }
+
+    .main-features .feature > * {
+        background-color: blue;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
