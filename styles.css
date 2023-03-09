@@ -958,6 +958,18 @@ body.active {
         width: 75%;
         height: 400px;
     }
+
+    .features-wrapper .sub-features .feature .feature-upper .feature-icon {
+        height: 90px;
+    }
+
+    .features-wrapper .sub-features .feature .feature-upper .feature-name {
+        font-size: 1.5rem;
+    }
+
+    .features-wrapper .sub-features .feature .feature-lower .feature-desc {
+        font-size: 1.6rem;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1018,6 +1030,17 @@ body.active {
     .main-features .feature .feature-lower .feature-desc {
         font-size: 3rem;
     }
+
+    
+    .features-wrapper .sub-features .feature .feature-upper {
+        margin-right: 3rem;
+        margin-left: 2rem;
+    }
+
+
+    .features-wrapper .sub-features .feature .feature-lower .feature-desc {
+        font-size: 1.6rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1074,6 +1097,22 @@ body.active {
         padding: 0 60px 0 0;
     }
 
+    .features-wrapper .sub-features .feature .feature-upper {
+        margin-right: 4rem;
+        margin-left: 3rem;
+    }
+
+    .features-wrapper .sub-features .feature .feature-lower .feature-desc {
+        font-size: 2.5rem;
+    }
+
+    .features-wrapper .sub-features .feature .feature-upper .feature-icon {
+        height: 120px;
+    }
+
+    .features-wrapper .sub-features .feature .feature-upper .feature-name {
+        font-size: 2.8rem;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -1131,4 +1170,6 @@ body.active {
     .main-features>div.feature:nth-child(odd) .feature-lower .feature-desc {
         padding: 0 150px 0 100px;
     }
+
+    
 }
