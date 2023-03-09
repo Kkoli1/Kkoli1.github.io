@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <script src="jquery-3.6.1.min.js"></script>
     <title>Meshr</title>
 </head>
@@ -30,6 +30,7 @@
 
     <section id="hero-section">
         <div class="hero-wrapper">
+            <div id="main-particles"></div>
             <div class="hero">
                 <div class="hero-texts">
                     <p>IDEATE FASTE<span>R</span></p>
@@ -39,12 +40,12 @@
                 <img src="assets/images/phoneview.png" alt="Meshr Phone View" class="phoneview-img">
             </div>
 
-            <div class="bg-bird-wrapper">
+            <!-- <div class="bg-bird-wrapper">
                 <img src="assets/images/bird.png" alt="" class="bg-elephant">
-            </div>
-            <!-- <div class="bg-elephant-wrapper">
-                <img src="assets/images/elephant.png" alt="" class="bg-elephant">
             </div> -->
+            <div class="bg-elephant-wrapper">
+                <img src="assets/images/elephant.png" alt="" class="bg-elephant">
+            </div>
             <div class="arrow-img-wrapper">
                 <a href="#about-section"><img src="assets/images/arrowdown.png" alt="Arrow Down" class="arrow-img"></a>
             </div>
@@ -82,8 +83,9 @@
         </div>
     </section>
     <section class="features-section">
+        
         <div class="features-wrapper">
-            
+            <div id="feature-particles"></div>  
             <div class="main-features">
                 <div class="features-text">sys:f<span>eat</span>ures</div>
                 <div class="feature">
@@ -141,6 +143,10 @@
 
         </div>
     </section>
+
+    <script src="scripts/particles.min.js"></script>
+    <script src="scripts/custom.js"></script>
+    <script src="scripts/custom2.js"></script>
 </body>
 
 </html>

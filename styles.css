@@ -12,6 +12,7 @@
     --primary: #EFB83C;
     --secondary: #2D2B2B;
     --light: #555555;
+    --light-opacity: #555555cb;
 }
 
 html {
@@ -157,6 +158,16 @@ body.active {
     overflow: hidden;
 }
 
+.hero-wrapper #main-particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
+}
+
 .hero {
     display: flex;
     flex-direction: column-reverse;
@@ -207,7 +218,7 @@ body.active {
     /* height: 83%; */
     height: 60vh;
     /* max-height: 600px; */
-    z-index: 99;
+    z-index: 3;
 }
 
 .bg-bird-wrapper {
@@ -230,13 +241,12 @@ body.active {
 .bg-elephant-wrapper {
     position: absolute;
     top: 10px;
-    z-index: 98;
+    z-index: 1;
 }
 
 .bg-elephant-wrapper img {
     height: 150vh;
     opacity: 0.05;
-
     animation-name: leftrightinfinite;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -437,7 +447,19 @@ body.active {
 
 .features-section {
     width: 100vw;
+}
+
+#feature-particles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+}
+
+.features-wrapper {
     background-color: var(--secondary);
+    position: relative;
+    overflow: hidden;
 }
 
 .features-wrapper .features-text {
@@ -460,11 +482,12 @@ body.active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .features-wrapper .feature {
-    background-color: var(--light);
-
+    background-color: var(--light-opacity);
+    
     margin: 0px 30px 45px 30px;
     border-radius: 100px;
     padding: 20px;
