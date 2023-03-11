@@ -159,7 +159,7 @@ body.active {
     overflow: hidden;
 }
 
-.hero-wrapper #main-particles {
+.hero-wrapper .main-particles {
     position: absolute;
     top: 0;
     right: 0;
@@ -450,7 +450,7 @@ body.active {
     width: 100vw;
 }
 
-#feature-particles {
+.feature-particles {
     width: 100%;
     height: 100%;
     position: absolute;
