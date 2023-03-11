@@ -11,6 +11,7 @@
 :root {
     --primary: #EFB83C;
     --secondary: #2D2B2B;
+    --secondary-opacity: #2d2b2b60;
     --light: #555555;
     --light-opacity: #555555cb;
 }
@@ -456,6 +457,15 @@ body.active {
     background-color: transparent;
 }
 
+#background-fade {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, transparent,var(--secondary));
+    height: 400px;
+}
+
 .features-wrapper {
     background-color: var(--secondary);
     position: relative;
@@ -561,7 +571,32 @@ body.active {
     font-size: 1.4rem;
 }
 
+.features-wrapper .sub-features #ca-feature {
+    margin-bottom: 110px;
+}
 
+.devs-wrapper {
+    background-color: var(--primary);
+    position: relative;
+}
+
+.devs-wrapper .polygon-wrapper img {
+    width: 100%;
+}
+
+.devs-wrapper .polygon-wrapper .devs-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 100;
+    
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding-left: 1px;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+}
 
 @media only screen and (min-width: 370px) {
     .logo {
@@ -992,6 +1027,12 @@ body.active {
 
     .features-wrapper .sub-features .feature .feature-lower .feature-desc {
         font-size: 1.6rem;
+    }
+
+    .devs-wrapper .polygon-wrapper .devs-text {
+        font-size: 3rem;
+        bottom: 50px;
+        padding-left: 7px;
     }
 }
 
