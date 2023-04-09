@@ -80,6 +80,7 @@ body.active {
 .link {
     font-family: 'Roboto', sans-serif;
     color: white;
+    cursor: pointer;
 }
 
 .logo {
@@ -106,6 +107,7 @@ body.active {
     font-size: 20px; */
     /* margin-left: 55px; */
 }
+
 
 .hamburger-menu {
     /* display: none; */
@@ -637,7 +639,8 @@ body.active {
 
 .devs-wrapper .devs .profile * {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
+    color: white;
 }
 
 .devs-wrapper .devs .devs-bot .profile:nth-child(2) {
