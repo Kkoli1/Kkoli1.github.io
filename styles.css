@@ -634,6 +634,7 @@ body.active {
     background-color: var(--secondary-opacity);
     border-radius: 50px;
     backdrop-filter: blur(5px);
+    margin: 20px;
 }
 
 
@@ -870,6 +871,62 @@ body.active {
         font-weight: 400;
         font-size: 1.5rem;
         /* margin-left: 55px; */
+        position: relative;
+    }
+
+    .link .about,
+    .link .features {
+        scale: 1;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    .link .about::after {
+        content: "about";
+        color: var(--primary);
+        width: 0%;
+        height: 100%;
+        overflow: hidden;
+        /* background-color: red; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.4s ease-in-out 0s;
+        -webkit-text-stroke: var(--primary) 1px;
+    }
+
+    .link .about:hover {
+        scale: 1.2;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    .link .about:hover::after {
+        width: 101%;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    /* // */
+    .link .features::after {
+        content: "features";
+        color: var(--primary);
+        width: 0%;
+        height: 100%;
+        overflow: hidden;
+        /* background-color: red; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.4s ease-in-out 0s;
+        -webkit-text-stroke: var(--primary) 1px;
+    }
+
+    .link .features:hover {
+        scale: 1.2;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    .link .features:hover::after {
+        width: 101%;
+        transition: all 0.2s ease-in-out 0s;
     }
 
     .links-wrapper {
@@ -1195,7 +1252,10 @@ body.active {
     }
 
     .devs-wrapper .devs .profile {
+        scale: 100%;
+        rotate: 0deg;
         margin-top: unset;
+        transition: all 0.3s ease-in-out 0s;
     }
 
     .devs-wrapper .devs .profile:hover {

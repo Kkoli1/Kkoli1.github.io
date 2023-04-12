@@ -7,6 +7,27 @@ hamburger.addEventListener('click', () => {
     body.classList.toggle('active');
 })
 
+const about = document.querySelector('li.about');
+const features = document.querySelector('li.features');
+const download = document.querySelector('li.link.download');
+about.addEventListener('click', () => {
+    links.classList.remove('active');
+    hamburger.classList.remove('active');
+    body.classList.remove('active');
+})
+
+features.addEventListener('click', () => {
+    links.classList.remove('active');
+    hamburger.classList.remove('active');
+    body.classList.remove('active');
+})
+
+download.addEventListener('click', () => {
+    links.classList.remove('active');
+    hamburger.classList.remove('active');
+    body.classList.remove('active');
+})
+
 const prevArrow = document.querySelector('.prev-arrow');
 const nextArrow = document.querySelector('.next-arrow');
 const slide = document.querySelector('.slider');
