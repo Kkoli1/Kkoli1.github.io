@@ -28,6 +28,11 @@ download.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar-wrapper');
+    navbar.classList.toggle('sticky', window.scrollY > 0);
+})
+
 const prevArrow = document.querySelector('.prev-arrow');
 const nextArrow = document.querySelector('.next-arrow');
 const slide = document.querySelector('.slider');
