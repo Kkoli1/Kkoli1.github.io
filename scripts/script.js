@@ -1,6 +1,9 @@
 const hamburger = document.querySelector('.hamburger-menu');
 const links = document.querySelector('.links-wrapper');
 const body = document.querySelector('body');
+
+// ============ NAVBAR ============
+
 hamburger.addEventListener('click', () => {
     links.classList.toggle('active');
     hamburger.classList.toggle('active');
@@ -28,10 +31,26 @@ download.addEventListener('click', () => {
     body.classList.remove('active');
 })
 
+// ============ NAVBAR ON SCROLL ============
+
+const navbar = document.querySelector('.navbar-wrapper');
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar-wrapper');
     navbar.classList.toggle('sticky', window.scrollY > 0);
+    
 })
+
+var lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;  
+    if (scrollTop > lastScrollTop) {
+        navbar.style.top="-100px";
+    }else {
+        navbar.style.top="0";
+    }
+    lastScrollTop = scrollTop;
+})
+
+// ============ ABOUT SECTION CAROUSEL ============
 
 const prevArrow = document.querySelector('.prev-arrow');
 const nextArrow = document.querySelector('.next-arrow');
