@@ -674,6 +674,26 @@ body.active {
     width: clamp(200px, 70%, 350px);
 }
 
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+.hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 @media only screen and (min-width: 370px) {
     .logo {
         font-size: 2.1rem;
