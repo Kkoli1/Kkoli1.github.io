@@ -21,14 +21,15 @@ html {
 }
 
 body::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
 }
 
 body {
-    -ms-overflow-style: none;
+    /* -ms-overflow-style: none; */
     /* IE and Edge */
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
     /* Firefox */
+    /* width: 5000px; */
     overflow-x: hidden;
 }
 
