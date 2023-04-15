@@ -22,8 +22,6 @@ html {
 
 body::-webkit-scrollbar {
     display: none;
-    width: 100vw;
-    overflow-x: hidden;
 }
 
 body {
@@ -31,6 +29,7 @@ body {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+    overflow-x: hidden;
 }
 
 body.active {
