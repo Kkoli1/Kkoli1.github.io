@@ -21,15 +21,15 @@ html {
 }
 
 body::-webkit-scrollbar {
-    /* display: none; */
+    display: none;
 }
 
 body {
-    /* -ms-overflow-style: none; */
+    -ms-overflow-style: none;
     /* IE and Edge */
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
     /* Firefox */
-    /* width: 5000px; */
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -45,7 +45,7 @@ body.active {
     top: 0;
     left: 0;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     background-color: transparent;
     padding: 20px;
     transition: all 0.2s ease-in-out 0s;
@@ -586,6 +586,11 @@ body.active {
 
 .features-wrapper .sub-features #ca-feature {
     margin-bottom: 110px;
+}
+
+.devs-section {
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .devs-wrapper {
