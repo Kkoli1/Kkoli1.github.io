@@ -1324,7 +1324,7 @@ body.active {
     } */
 
     .devs-wrapper .devs {
-        height: calc(100vh + 150px);
+        /* height: calc(100vh + 150px); */
         width: 100vw;
         display: grid;
         grid-template-columns: auto auto;
@@ -1365,7 +1365,7 @@ body.active {
 
     #kend-profile,
     #kevs-profile {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
 }
