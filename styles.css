@@ -23,7 +23,7 @@ html {
 body::-webkit-scrollbar {
     display: none;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
